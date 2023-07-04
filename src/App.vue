@@ -1,6 +1,10 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
+import { useCounterStore } from '@/stores/counter'
+
+const store = useCounterStore()
+store.increment.mockImplementation(() => {});
 </script>
 
 <template>

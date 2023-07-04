@@ -1,11 +1,12 @@
 import './assets/main.css'
 
+import { jest } from "@storybook/jest";
 import { createApp } from 'vue'
-import { createPinia } from 'pinia'
+import { createTestingPinia } from '@pinia/testing'
 import App from './App.vue'
 
 const app = createApp(App)
 
-app.use(createPinia())
+app.use(createTestingPinia({ createSpy: jest.fn }))
 
 app.mount('#app')
