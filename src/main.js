@@ -1,5 +1,3 @@
-import './assets/main.css'
-
 import { jest } from "@storybook/jest";
 import { createApp } from 'vue'
 import { createTestingPinia } from '@pinia/testing'
